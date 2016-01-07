@@ -2,10 +2,17 @@
 echo "###Memory Usage Tester###"
 echo "Current memory stats:"
 free -h
-python /tmp/buildpacks/memtest/bin/mem.py &
+#python /tmp/buildpacks/memtest/bin/mem.py &
 echo "Filling up 1GB of memory..."
 sleep 3
 echo "Current memory stats:"
 free -h
+echo ""
+echo "###Disc Usage Tester###"
+echo "Current free disc:"
+df -h
+dd if=/dev/zero of=/home/vap/test.file bs=1M count=2000
+echo "Current free disc:"
+df -h
 
 exit 1
