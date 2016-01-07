@@ -8,7 +8,7 @@ sleep 3
 echo "Current memory stats:"
 free -h
 echo 
-sleep 180 #Wait three minutes
+sleep 400 #Wait three minutes
 #echo "###Disc Usage Tester###"
 #echo "Current free disc:"
 #df -h
