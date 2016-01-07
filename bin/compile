@@ -8,13 +8,14 @@ sleep 3
 echo "Current memory stats:"
 free -h
 echo 
-echo "###Disc Usage Tester###"
-echo "Current free disc:"
-df -h
-echo "Creating 4GB testfile..."
-dd if=/dev/zero of=/home/vcap/test.file bs=1M count=4000
-echo "Current free disc:"
-df -h
-echo "Deleting testfile"
-rm /home/vcap/test.file
+sleep 180 #Wait three minutes
+#echo "###Disc Usage Tester###"
+#echo "Current free disc:"
+#df -h
+#echo "Creating 4GB testfile..."
+#dd if=/dev/zero of=/home/vcap/test.file bs=1M count=4000
+#echo "Current free disc:"
+#df -h
+#echo "Deleting testfile"
+#rm /home/vcap/test.file
 exit 1
