@@ -7,11 +7,12 @@ echo "Filling up 1.0GB of memory..."
 sleep 3
 echo "Current memory stats:"
 free -h
-echo ""
+echo 
 echo "###Disc Usage Tester###"
 echo "Current free disc:"
 df -h
-dd if=/dev/zero of=/home/vcap/test.file bs=1M count=5000
+echo "Creating 10GB testfile..."
+dd if=/dev/zero of=/home/vcap/test.file bs=1M count=10000
 echo "Current free disc:"
 df -h
 echo "Deleting testfile"
