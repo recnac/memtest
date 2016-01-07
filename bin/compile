@@ -7,3 +7,5 @@ echo "Filling up 1GB of memory..."
 sleep 3
 echo "Current memory stats:"
 free -h
+
+exit 1
