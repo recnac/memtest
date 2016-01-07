@@ -6,4 +6,4 @@ python /tmp/buildpacks/memtest/bin/mem.py &
 echo "Filling up 1GB of memory..."
 sleep 3
 echo "Current memory stats:"
-free -m
+free -h
