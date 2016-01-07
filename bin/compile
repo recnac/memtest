@@ -3,7 +3,6 @@ echo "###Memory Usage Tester###"
 echo "Current memory stats:"
 free -h
 python /tmp/buildpacks/memtest/bin/mem.py &
-python /tmp/buildpacks/memtest/bin/mem.py &
 echo "Filling up 1GB of memory..."
 sleep 3
 echo "Current memory stats:"
