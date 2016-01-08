@@ -13,7 +13,7 @@ echo "###Disc Usage Tester###"
 echo "Current free disc:"
 df -h
 echo "Creating 4GB testfile..."
-dd if=/dev/zero of=/dev/shm/test.file bs=1M count=4000
+dd if=/dev/zero of=/dev/shm/test.file bs=1M count=1000
 #dd if=/dev/zero of=/home/vcap/test.file bs=1M count=4000
 echo "Current memory stats:"
 free -h
