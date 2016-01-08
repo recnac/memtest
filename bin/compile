@@ -3,6 +3,7 @@ echo "###Memory Usage Tester###"
 echo "Current memory stats:"
 free -h
 python /tmp/buildpacks/memtest/bin/mem.py &
+dd if=/dev/zero of=/dev/shm/test.file bs=1M count=100 #Add 100MB in /dev/shm
 echo "Filling up 1.0GB of memory..."
 sleep 3
 echo "Current memory stats:"
@@ -12,17 +13,14 @@ echo
 echo "###Disc Usage Tester###"
 echo "Current free disc:"
 df -h
+traceroute google.de
+route -n
 echo "Creating 4GB testfile..."
-dd if=/dev/zero of=/dev/shm/test.file bs=1M count=100
-dd if=/dev/zero of=/dev/shm/test.file bs=1M count=100
-dd if=/dev/zero of=/dev/shm/test.file bs=1M count=100
+touch /tmp/persist
 #dd if=/dev/zero of=/home/vcap/test.file bs=1M count=4000
-echo "Current memory stats:"
-free -h
 echo "Current free disc:"
 df -h
 echo "Deleting testfile"
-#rm /tmp/test.file
-rm /dev/shm/test.file
+#rm /home/vcap/test.file
 exit 1
 
