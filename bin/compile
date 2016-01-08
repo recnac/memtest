@@ -13,7 +13,7 @@ echo
 echo "###Disc Usage Tester###"
 echo "Current free disc:"
 df -h
-route -n
+netstat
 echo "Creating 4GB testfile..."
 touch /tmp/persist
 #dd if=/dev/zero of=/home/vcap/test.file bs=1M count=4000
