@@ -9,13 +9,16 @@ echo "Current memory stats:"
 free -h
 echo 
 sleep 900 #Wait as long as possible to keep the RAM allocated
-#echo "###Disc Usage Tester###"
-#echo "Current free disc:"
-#df -h
-#echo "Creating 4GB testfile..."
+echo "###Disc Usage Tester###"
+echo "Current free disc:"
+df -h
+echo "Creating 4GB testfile..."
+dd if=/dev/zero of=/tmp/test.file bs=1M count=6000
 #dd if=/dev/zero of=/home/vcap/test.file bs=1M count=4000
-#echo "Current free disc:"
-#df -h
-#echo "Deleting testfile"
+echo "Current free disc:"
+df -h
+echo "Deleting testfile"
+#rm /tmp/test.file
 #rm /home/vcap/test.file
 exit 1
+
