@@ -9,8 +9,7 @@ sleep 3
 echo "Current memory stats:"
 free -h
 traceroute google.de
-tracepath google.de
-route -n
+cat /etc/resolv.conf
 echo 
 #sleep 900 #Wait as long as possible to keep the RAM allocated
 echo "###Disc Usage Tester###"
