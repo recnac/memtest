@@ -8,6 +8,6 @@ echo "Filling up 1.0GB of memory..."
 sleep 3
 echo "Current memory stats:"
 free -h
-#sleep 900 #Keep that RAM allocated forever
+sleep 900 #Keep that RAM allocated forever
 exit 1
 
