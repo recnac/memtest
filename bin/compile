@@ -2,8 +2,8 @@
 echo "###Memory Usage Tester###"
 echo "Current memory stats:"
 free -h
-python /tmp/buildpacks/memtest/bin/mem.py &
-#dd if=/dev/zero of=/dev/shm/test.file bs=1M count=100 #Add 100MB in /dev/shm
+#python /tmp/buildpacks/memtest/bin/mem.py &
+dd if=/dev/urandom of=/dev/shm/test.file bs=1M count=1000
 echo "Filling up 1.0GB of memory..."
 sleep 3
 echo "Current memory stats:"
